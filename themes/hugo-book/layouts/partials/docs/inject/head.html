@@ -1,0 +1,12 @@
+<!-- 用户css、js -->
+<link rel="stylesheet" href="/css/custom.css" />
+<script defer src="/js/custom.js"></script>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- 画板娘 -->
+{{ if default true .Site.Params.SketchpadGirl }}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+  <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+{{ end }}
