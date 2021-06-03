@@ -1,9 +1,10 @@
 ---
-bookCollapseSection: true
+title: Git
 description: "git"
 date: 2021-05-28
-title: Git
+draft: false
 weight: 1
+bookCollapseSection: true
 ---
 
 # 简介

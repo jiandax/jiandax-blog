@@ -47,22 +47,30 @@ aside nav ul li {
 .markdown {
   margin: 0 1rem;
 }
+
 /*******标题h1，h2，h3**********/
-.markdown h1{
-    font-weight:bolder;
-    font-size:2rem;
-    margin-top:3rem;
-    margin-bottom:0.5rem;
+.markdown h1 {
+  font-weight: bolder;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
 }
-.markdown h2{
-    font-weight:bolder;
-    font-size:1.5rem;
-    margin-top:1.5rem;
-    margin-bottom:0.5rem;
+
+.markdown h2 {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
-.markdown h3{
-    font-weight:bolder;
-    font-size:1rem;
-    margin-top:1rem;
-    margin-bottom:0.5rem;
+
+.markdown h3 {
+  font-weight: bolder;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/*******表格**********/
+thead {
+  background: var(--gray-100);
 }

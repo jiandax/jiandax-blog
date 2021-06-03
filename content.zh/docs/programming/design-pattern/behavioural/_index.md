@@ -1,6 +1,15 @@
 ---
-bookCollapseSection: true
 title: 行为型
+description: "behavioural"
+date: 2021-06-03
+draft: false
 weight: 3
+bookCollapseSection: true
 ---
+
+# 行为型
+
+| 常用                                          | 不常用                                  |
+| :-------------------------------------------- | :-------------------------------------- |
+| 观察者、模板、策略、<br/>职责链、迭代器、状态 | 访问者、备忘录、命令、<br/>解释器、中介 |
 
