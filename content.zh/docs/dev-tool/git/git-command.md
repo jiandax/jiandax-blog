@@ -1,7 +1,7 @@
 ---
 title: "基本操作"
 description: "git-command"
-date: 2021-05-28T20:41:00+08:00
+date: 2021-05-28
 draft: false
 weight: 2
 ---

@@ -1,6 +1,7 @@
 ---
 bookCollapseSection: true
 description: "git"
+date: 2021-05-28
 title: Git
 weight: 1
 ---

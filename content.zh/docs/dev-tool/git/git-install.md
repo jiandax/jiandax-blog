@@ -1,7 +1,7 @@
 ---
 title: "安装配置"
 description: "git-install"
-date: 2021-05-26T23:51:00+08:00
+date: 2021-05-26
 draft: false
 weight: 1
 ---
