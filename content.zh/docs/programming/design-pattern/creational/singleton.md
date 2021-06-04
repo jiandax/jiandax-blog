@@ -1,8 +1,7 @@
 ---
 title: "单例模式"
 description: "Singleton"
-date: 2021-01-24T00:53:14+08:00
-enableToc: true
+date: 2021-06-04
 draft: false
 weight: 1
 ---
@@ -18,47 +17,17 @@ weight: 1
 
 - **主要解决：** 一个全局使用的类频繁的创建与销毁
 - **何时使用：** 当您想控制实例数目，节省系统资源的时候。
-- **如何解决：** 判断系统是否已经有这个单例，如果有则返回，如果没有则创建。
-- **关键代码：** 构造函数是私有的。
-- **使用场景：**
+- **应用实例：**
   - 要求生产唯一序列号。  
   - WEB 中的计数器，不用每次刷新都在数据库里加一次，用单例先缓存起来。  
   - 创建的一个对象需要消耗的资源过多，比如 I/O 与数据库的连接等。
 - **注意事项：**
   - 防止多线程情况下，实例被多次创建
-  - 单例类不要实现Cloneable接口
+  - 单例类不要实现 Cloneable 接口
 
 
 
-# 优缺点
-
-- 在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例
-- 避免对资源的多重占用（比如写文件操作）
-- 没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化
-
-
-
-# 代码实现
-
-## 懒汉式
-
-- 一般情况下，不推荐使用
-
-```java
-// 在第一次调用的时候实例化自己
-public class Singleton {  
-    private static Singleton instance = null; 
-    private Singleton() {}  
-    public static Singleton getInstance() {  
-         if (instance == null) {    
-             instance = new Singleton();  
-         }    
-        return single;  
-    }  
-}
-```
-
-
+# 示例
 
 ## 饿汉式
 
@@ -76,13 +45,14 @@ public class Singleton {
 }
 ```
 
- 
 
-## 双检锁式
 
-- 如果有其他特殊的需求，可以考虑使用
+## 懒汉式
+
+- 一般情况下，不建议使用
 
 ```java
+// 在第一次调用的时候实例化自己
 public class Singleton {
     private static volatile Singleton instance = null;    
     private Singleton(){}    
@@ -104,7 +74,7 @@ public class Singleton {
 
 ## 登记式
 
-- 只有在要明确实现 lazy loading 效果时，才会使用
+- 内部静态类，只有在要明确实现 lazy loading 效果时，才会使用
 
 
 ```java
@@ -132,4 +102,12 @@ public enum Singleton {
     }  
 }
 ```
+
+
+
+# 优缺点
+
+- 在内存里只有一个实例，减少了内存的开销，尤其是频繁的创建和销毁实例
+- 避免对资源的多重占用（比如写文件操作）
+- 没有接口，不能继承，与单一职责原则冲突，一个类应该只关心内部逻辑，而不关心外面怎么样来实例化
 
