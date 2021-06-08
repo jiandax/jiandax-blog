@@ -5,8 +5,8 @@ date: 2021-06-04
 draft: false
 weight: 2
 ---
-
-# 概述
+# 工厂模式
+## 概述
 
 - Factory
 - 定义一个用于创建对象的接口，让子类决定实例化哪一个类。
@@ -14,9 +14,9 @@ weight: 2
 
 
 
-# 示例
+## 示例
 
-## 简单工厂
+### 简单工厂
 
 ```java
 // 类似产品：XiaoMi，Iphone
@@ -49,7 +49,7 @@ public class PhoneFactory {
 
 
 
-## 工厂方法
+### 工厂方法
 
 - **应用实例**
   - 日志记录器（记录到硬盘/系统事件/远程服务器）
@@ -82,7 +82,7 @@ public class HuanWeiFactory implements PhoneFactory {
 
 
 
-## 抽象工厂
+### 抽象工厂
 
 - **应用实例：** 生成不同操作系统的程序
 - **注意事项：** 产品族难扩展，产品等级易扩展

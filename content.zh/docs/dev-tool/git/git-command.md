@@ -1,12 +1,13 @@
 ---
-title: "基本操作"
+title: "基本命令"
 description: "git-command"
 date: 2021-05-28
 draft: false
 weight: 2
 ---
 
-# 工程区域
+# 基本命令
+## 工程区域
 - 工作区：日常工作的工程目录
 - 暂存区：又称索引，工程根目录.git/index 文件夹
 - 版本区：又称本地仓库，工程根目录.git文件夹
@@ -14,9 +15,9 @@ weight: 2
 
 
 
-# 基本操作 
+## 基本操作 
 
-## 创建仓库
+### 创建仓库
 
 - **git init**
 
@@ -36,7 +37,7 @@ $ git clone git://github.com/schacon/grit.git myDir
 
 
 
-## 变更修改
+### 变更修改
 
 - **git add**
 
@@ -92,7 +93,7 @@ $ git commit --amend
 
 
 
-## 回退版本
+### 回退版本
 
 - **git reset**
 ```bash
@@ -187,9 +188,10 @@ $ git merge mybranch
 ```
 
 
-# 查看操作
 
-## 查看差异
+## 查看操作
+
+### 查看差异
 
 - **git status**
 ```bash
@@ -220,7 +222,7 @@ $ git diff --stat
 
 
 
-## 查看日志
+### 查看日志
 
 - **git log**
 ```bash
@@ -243,7 +245,7 @@ $ git blame README.txt
 
 
 
-## 查看帮助
+### 查看命令
 
 - **git help**
 ```bash

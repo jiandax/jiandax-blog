@@ -6,9 +6,10 @@ draft: false
 weight: 3
 ---
 
-# GitHub
+# 实战运用
+## GitHub
 
-## 免密提交
+### 免密提交
 
 - 生成 SSH Key 文件
 
@@ -28,9 +29,9 @@ weight: 3
 
 
 
-# TortoiseGit
+## TortoiseGit
 
-## 与 GitHub 共用密码
+### 与 GitHub 共用密码
 
 - 现象：TortoiseGit 不能共用ssh-keygen产生的密钥
 

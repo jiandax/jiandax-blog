@@ -51,23 +51,25 @@ aside nav ul li {
 /*******标题h1，h2，h3**********/
 .markdown h1 {
   font-weight: bolder;
-  font-size: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: 3.4rem;
 }
 
 .markdown h2 {
   font-weight: bolder;
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+  margin-top: 3rem;
 }
 
 .markdown h3 {
   font-weight: bolder;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.markdown h4 {
+  font-weight: bolder;
   font-size: 1rem;
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
 }
 
 /*******表格**********/

@@ -1,8 +1,7 @@
 ---
 title: "代理模式"
 description: "Proxy"
-date: 2021-01-23T00:16:15+08:00
-enableToc: true
+date: 2021-06-07
 draft: false
 weight: 1
 ---
