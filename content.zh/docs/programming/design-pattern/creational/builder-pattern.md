@@ -1,6 +1,6 @@
 ---
-title: "建造者模式"
-description: "Builder"
+title: 建造者模式
+description: Builder Pattern
 date: 2021-06-06
 draft: false
 weight: 3
@@ -87,12 +87,3 @@ public class HouseDirector {
   - JAVA 中的 StringBuilder
 - **注意事项：**
   - 与工厂模式的区别是：建造者模式更加关注与零件装配的顺序
-
-
-
-## 优缺点
-
-- 建造者独立，易扩展。 
-- 便于控制细节风险。
-- 产品必须有共同点，范围有限制
-- 如内部变化复杂，会有很多的建造类

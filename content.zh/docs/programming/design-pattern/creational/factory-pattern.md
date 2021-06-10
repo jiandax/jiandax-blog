@@ -1,6 +1,6 @@
 ---
-title: "工厂模式"
-description: "Factory"
+title: 工厂模式
+description: Factory Pattern
 date: 2021-06-04
 draft: false
 weight: 2
@@ -51,6 +51,8 @@ public class PhoneFactory {
 
 ### 工厂方法
 
+- **何时使用**
+  - 明确计划不同条件下创建不同实例时。
 - **应用实例**
   - 日志记录器（记录到硬盘/系统事件/远程服务器）
   - 数据库访问（多种类型数据库）
@@ -84,6 +86,7 @@ public class HuanWeiFactory implements PhoneFactory {
 
 ### 抽象工厂
 
+- **何时使用：**系统的产品有多于一个的产品族，而系统只消费其中某一族的产品。
 - **应用实例：** 生成不同操作系统的程序
 - **注意事项：** 产品族难扩展，产品等级易扩展
 

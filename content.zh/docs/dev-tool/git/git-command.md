@@ -1,6 +1,6 @@
 ---
-title: "基本命令"
-description: "git-command"
+title: 基本命令
+description: git-command
 date: 2021-05-28
 draft: false
 weight: 2

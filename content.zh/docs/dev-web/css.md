@@ -1,6 +1,6 @@
 ---
 title: CSS
-description: css
+description: CSS
 date: 2021-06-08
 draft: false
 weight: 2

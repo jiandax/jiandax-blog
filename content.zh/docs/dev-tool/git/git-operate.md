@@ -1,6 +1,6 @@
 ---
-title: "实战运用"
-description: "git-operate"
+title: 实战运用
+description: git-operate
 date: 2021-05-28
 draft: false
 weight: 3
