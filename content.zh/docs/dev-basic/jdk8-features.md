@@ -1,9 +1,9 @@
 ---
-title: "JDK8 新特性"
-date: 2021-01-01T01:01:01+09:00
-description: 
-enableToc: true
+title: JDK8 新特性
+description: JDK8
+date: 2021-06-16
 draft: false
+weight: 2
 ---
 
 # Java8 流
