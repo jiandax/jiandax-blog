@@ -165,9 +165,32 @@ weight: 1
 
 
 
-## java.util.regex
+## JDK正则
+
+- java.util.regex
+
+```java
+String input = "ABC";
+String regex = "[a-z]{4}";
+
+// String类
+input.matches(regex);
+
+// Pattern类
+Pattern.matches(regex, input)
+    
+// Matcher类
+Pattern pattern = Pattern.compile(regex);
+Matcher matcher = pattern.matcher(input);
+matcher.matches();		// 整个字符串是否匹配
+matcher.find();		// 是否有下一个匹配的子串
+matcher.group(1);		// 获取1号捕获组匹配到的子串
+...
+```
 
 
 
 ## 常用正则
+
+...
 
