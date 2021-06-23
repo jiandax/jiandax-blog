@@ -38,8 +38,25 @@ weight: 3
 - 原因：TortoiseGit 使用扩展名为ppk的密钥，而不是ssh-keygen生成的rsa密钥
 
 - 方式一：安装 TortoiseGit 安装过程中，选择使用OpenSSH方式
+
 - 方式二：设置 TortoiseGit 网络的ssh客户端位置为 Git\usr\bin\ssh.exe
   <img src="/images/202106/jiandax_20210602230025.png"  width=80% height=80%/>
 
-    
+  
+  
+## 实际问题
+### CHERRY_PICK_HEAD exists
+
+- 错误日志
+
+  <img src="/images/202106/jiandax_20210622202849.png"  width=80% height=80%/>
+
+
+
+- 解决方法
+
+  ```bash
+  $ git cherry-pick --abort
+  ```
+  
 

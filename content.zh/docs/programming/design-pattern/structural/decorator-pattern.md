@@ -35,36 +35,35 @@ public class Rectangle implements Shape {
 ```java
 // 装饰类
 public abstract class ShapeDecorator implements Shape {
-    protected Shape decoratedShape;
-    public ShapeDecorator(Shape decoratedShape) {
-        this.decoratedShape = decoratedShape;
+    protected Shape shape;
+    public ShapeDecorator(Shape shape) {
+        this.shape = shape;
     }
 
     @Override
     public void draw() {
-        decoratedShape.draw();
+        shape.draw();
     }
 }
 
-// 类似装饰类:
+// 类似装饰类:GreenShapeDecorator
 public class RedShapeDecorator extends ShapeDecorator {
-    public RedShapeDecorator(Shape decoratedShape) {
-        super(decoratedShape);
+    public RedShapeDecorator(Shape shape) {
+        super(shape);
     }
 
     @Override
     public void draw() {
-        decoratedShape.draw();
-        setRedBorder(decoratedShape);
+        super.draw();
+        setRedBorder(shape);
     }
 
-    private void setRedBorder(Shape decoratedShape) {
+    private void setRedBorder(Shape shape) {
         System.out.println("Border Color: Red");
     }
 }
 ```
 ```java
-// 测试
 public class Test {
     public static void main(String[] args) {
         Shape circle = new Circle();

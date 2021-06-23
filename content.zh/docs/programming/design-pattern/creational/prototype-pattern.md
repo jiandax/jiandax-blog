@@ -18,7 +18,7 @@ weight: 4
 ## 示例
 
 ```java
-//原型类：实现Cloneable接口
+// 原型类：实现Cloneable接口
 public class Prototype implements Cloneable {
 	private String name;
     // setter、getter...
@@ -33,9 +33,9 @@ public class Prototype implements Cloneable {
         }
     } 
 }
-
-// 情景类
-public class Client {
+```
+```java
+public class Test {
     public static void main(String[] args) {
         Prototype pro1=new Prototype();
         pro1.setName("张三");

@@ -57,7 +57,8 @@ public class NetEasy implements Wow {
         System.out.println("网易代理《魔兽世界》结束");
     }
 }
-
+```
+```java
 public class Test {
     public static void main(String[] args) {
         Wow wow = new NetEasy(new Blizzard());
@@ -90,7 +91,8 @@ public class ProxyHandler implements InvocationHandler {
         return result;
     }
 }
-
+```
+```java
 public class Test {
     public static void main(String[] args) {
         ProxyHandler handler = new ProxyHandler(new Blizzard());
@@ -126,7 +128,8 @@ public class CglibInterceptor implements MethodInterceptor {
         return result;
     }
 }
-
+```
+```java
 public class Test {
     public static void main(String[] args) {
         CglibInterceptor interceptor = new CglibInterceptor();

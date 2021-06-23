@@ -29,7 +29,8 @@ public class HuanWei implements Phone{
         System.out.println("华为手机");
     }
 } 
-
+```
+```java
 // 统一工厂
 public class PhoneFactory {
     public static Phone createPhone(String type){
@@ -69,7 +70,8 @@ public class HuanWei implements Phone{
         System.out.println("华为手机");
     }
 }
-
+```
+```java
 // 类似工厂：XiaoMiFactory，IphoneFactory
 public interface PhoneFactory {
      Phone createPhone(); 
@@ -106,7 +108,8 @@ public class HuanWeiCamera implements Camera {
 public class HuanWeiScreen implements Screen {
     void name();
 }
-
+```
+```java
 // 类似工厂：XiaoMiFactory、IphoneFactory
 public interface PhoneFactory {
     CPU createCpu();

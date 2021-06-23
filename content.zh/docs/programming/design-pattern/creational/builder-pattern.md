@@ -25,7 +25,8 @@ public class House {
     // getter、setter
     //...
 }
-
+```
+```java
 // 抽象建造者：主要用来指定建造步骤
 public abstract class HouseBuilder {
 	protected House house = new House();
@@ -53,7 +54,8 @@ public class HighBuilding extends HouseBuilder{
 		System.out.println("高楼屋顶");
 	}
 }
-
+```
+```java
 // 指挥类
 public class HouseDirector {
 	HouseBuilder houseBuilder = null;

@@ -31,7 +31,8 @@ public class Dell implements Brand {
         System.out.println("出售戴尔");
     }
 }
-
+```
+```java
 // 电脑
 public class Computer {
     protected Brand brand;
@@ -55,14 +56,14 @@ public class Desktop extends Computer {
         System.out.println("出售台式电脑");
     }
 }
-
+```
+```java
 public class Test {
     public static void main(String[] args) {
         Computer c = new Desktop(new Dell());
         c.sale();
     }
 }
-
 ```
 
 
