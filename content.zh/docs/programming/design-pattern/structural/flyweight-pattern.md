@@ -18,50 +18,41 @@ weight: 7
 ## 示例
 
 ```java
-//抽象享元类
-abstract class AbsFlyweight {
-    //内部状态：不可改变，可以共享
-    protected final String color;
-    
-    //构造方法：传入内部状态
-    public AbsFlyweight(String color){
+public interface IChess {
+    public void draw();
+}
+
+public class Chess implements IChess {
+    // 内部状态：不可改变，可以共享
+    private String color;
+    public Chess(String color) {
         this.color = color;
     }
-    
-    public abstract void display(String position);
-}
 
-//具体享元类
-class Flyweight extends AbsFlyweight {
-    public Flyweight(String color) {
-        super(color);
+    // 外部状态：可以改变，不可共享
+    private String position;
+    public void setPosition(String position) {
+        this.position = position;
     }
-    
-    //外部状态：可以改变，不可共享，作为参数传入方法中
-    public void display(String position){
-        System.out.println("棋子：" + color + "，" + position);
+
+    @Override
+    public void draw() {
+        System.out.println("围棋：color=" + color + ", position=" + position);
     }
 }
-
 ```
 ```java
-//享元工厂
-class FlyweightFactory {
-    //池容器
-    private static HashMap<String,Flyweight> pool= new HashMap<>();
-    
-    //获取享元对象
-    public static Flyweight getFlyweight(String color){
-        Flyweight flyweight = null;
-        if(pool.containsKey(color)){
-            System.out.print("————————————");
-            flyweight = pool.get(color);
-        }else{
-            System.out.print("++++++++++++");
-            flyweight = new Flyweight(color);
-            pool.put(color, flyweight);
+// 享元工厂
+public class ChessFactory {
+    // 池容器
+    private static final HashMap<String, IChess> chessMap = new HashMap<>();
+
+    // 获取享元对象
+    public static Chess getChess(String color) {
+        if (!chessMap.containsKey(color)) {
+            chessMap.put(color, new Chess(color));
         }
-        return flyweight;
+        return (Chess) chessMap.get(color);
     }
 }
 ```
@@ -69,15 +60,16 @@ class FlyweightFactory {
 ```java
 public class Test {
     public static void main(String[] args) {
-        Flyweight chess;
+        Chess chess;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if(new Random().nextBoolean()){
-                    chess=FlyweightFactory.getFlyweight("黑色");
-                }else {
-                    chess=FlyweightFactory.getFlyweight("白色");
+                if (new Random().nextBoolean()) {
+                    chess = ChessFactory.getChess("黑色");
+                } else {
+                    chess = ChessFactory.getChess("白色");
                 }
-                chess.display("x"+i+"y"+j);
+                chess.setPosition("x" + i + "y" + j);
+                chess.draw();
             }
         }
     }
